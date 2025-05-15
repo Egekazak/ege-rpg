@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault of Enduriel</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <h1>THE VAULT OF ENDURIEL</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li>
+                    <a href="#">WORLD OF WARCRAFT RP</a>
+                    <ul class="dropdown">
+                        <li><a href="custom-items.html">CUSTOM BOOKS</a></li>
+                        <li><a href="guides.html">GUIDES</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section>
+            <h1>CUSTOM BOOKS</h1>
+    
+            <!-- Buttons for filtering -->
+            <div class="filter-buttons">
+                <button class="filter-btn" data-category="all">ALL</button>
+                <button class="filter-btn" data-category="demonic">FEL & DEMONIC</button>
+                <button class="filter-btn" data-category="nerubian">NERUBIAN</button>
+                <button class="filter-btn" data-category="zandali">ZANDALARI</button>
+                <button class="filter-btn" data-category="necromancy">NECROMANCY</button>
+                <button class="filter-btn" data-category="shadow">SHADOW & VOID</button>
+                <button class="filter-btn" data-category="arcane">ARCANE</button>
+                <button class="filter-btn" data-category="mogu">MOGU & PANDAREN</button>
+                <!-- Add more buttons for other categories as needed -->
+            </div>
+    
+            <div class="items">
+                <div class="item-card" data-category="arcane">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <img src="images/elven_book_01.png" alt="icon" class="item-icon">
+                            <span class="item-name">WARDS AND WEAVES: A PRACTICAL GUIDE ON ARCANE ENCHANTING</span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description"></p>
+                            <p class="item-obtained-from">Written by Aryssa Bel'Athil</p>
+                            <h4>I. Introduction: On the Act of Binding</h4>
+                            <p> Enchanting is not an art of impulse. It is an act of memory—<b>the memory of magic</b>, placed into material form.</p>
+                            <p>In Quel’Thalas, we wove spells into silk banners and regalia long before the arcane was taught beyond the spires. In Dalaran, enchantments were reduced to recipes. Both methods lack discipline. This guide favors the former: <b>controlled, intention-based enchantment</b>, passed through proper channels of resonance and medium.</p>
+                            <h4>II. Materials and Their Magical Affinities</h4>
+                            <p>Every substance has a <b>magical sympathy</b>, and enchanting is the negotiation of those tendencies.</p>
+                            <ul>
+                                <li><b>Arkhana</b>: Common in lesser enchantments; ideal for learning.</li>
+                                <li><b>Leydust</b>: Refined from leyline sediment—volatile if rushed.</li>
+                                <li><b>Sorcerous Fire / Air / Water</b>: Elemental remnants that enhance effect, but distort intent. Use only when you understand the spirit of the element.</li>
+                                <li><b>Runed Copper Rod</b>: The first of the focusing tools. Treat it as an extension of your will, not a wand.</li>
+                            </ul>
+                            <p><b><i>Note</i></b>: Items must be cleansed of fel traces. Even mild taint can cause echoing dissonance in bindings.</p>
+                            <h4>III. The First Enchantment: Minor Intellect (Classic)</h4>
+                            <p>The simplest enchantment still used today: <b>Enchantment: Minor Intellect</b>. Once favored by apprentice magi and Silvermoon initiates.</p>
+                            <ul>
+                                <li>Material: Simple robe or linen cowl </li>
+                                <li>Catalyst: 1x Strange Dust, 1x Lesser Magic Essence</li>
+                                <li>Rod: Runed Copper Rod</li>
+                            </ul>
+                            <p>Steps:</p>
+                            <ul>
+                                <ol>Draw a resonance loop on the surface of the item.</ol>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card" data-category="demonic">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <img src="images/demon_book_01.png" alt="icon" class="item-icon">
+                            <span class="item-name">THE CODEX OF SEVERANCE</span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">A golden ring inscribed with abyssal runes and arcane symbols. Boosts the wearers control over demons, increasing the potency of demonic magic and providing resistance to corruption effects from fel energy.</p>
+                            <p class="item-obtained-from">Obtained from Aryssa Bel'Athil.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="item-card" data-category="nerubian">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <img src="images/nerubian_book_01.png" alt="icon" class="item-icon">
+                            <span class="item-name">SILK OF THE DEEP WARRENS</span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">This silver ring is inscribed with runes that continuously leak shadow energy. Increases the wearers resistance to curses and hexes while amplifying their power when they draw upon shadow magic, though it comes with a slight risk of dark influence over time.</p>
+                            <p class="item-obtained-from">Obtained from Aryssa Bel'Athil.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card" data-category="zandali">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <img src="images/zandali_tablet.png" alt="icon" class="item-icon">
+                            <span class="item-name">THE TABLET OF D'ZUN'KA</span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">...</p>
+                            <p class="item-obtained-from">...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card" data-category="necromancy">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <img src="images/necro_book_01.png" alt="icon" class="item-icon">
+                            <span class="item-name">THE EBON LOOM</span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">...</p>
+                            <p class="item-obtained-from">...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card" data-category="shadow">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <img src="images/shadow_book_01.png" alt="icon" class="item-icon">
+                            <span class="item-name">THE UMBRAL LEXICON</span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">...</p>
+                            <p class="item-obtained-from">...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card" data-category="demonic">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <img src="images/demon_book_02.png" alt="icon" class="item-icon">
+                            <span class="item-name">THE GRIMOIRE OF SILENT TONGUES</span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">...</p>
+                            <p class="item-obtained-from">...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card" data-category="mogu">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <img src="images/mogu_book_01.png" alt="icon" class="item-icon">
+                            <span class="item-name">THE TOME OF OBSIDIAN LORDS</span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">...</p>
+                            <p class="item-obtained-from">...</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- More item cards here, with appropriate data-category values -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Ege Kazak - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Get all the toggle buttons for item cards
+        const itemToggles = document.querySelectorAll('.item-toggle');
+
+        // Add click event listeners to each button
+        itemToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const itemCard = toggle.closest('.item-card'); // Get the closest item card
+                itemCard.classList.toggle('active'); // Toggle the 'active' class to show/hide the item details
+            });
+        });
+    </script>
+    <script>
+        // Get all the filter buttons
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        // Add click event listeners to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category'); // Get the category to filter by
+        
+                // Get all item cards
+                const itemCards = document.querySelectorAll('.item-card');
+        
+                // Loop through each item card and toggle visibility based on category
+                itemCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+        
+                    if (category === "all" || cardCategory === category) {
+                        card.style.display = "block"; // Show item if category matches
+                    } else {
+                        card.style.display = "none"; // Hide item if category doesn't match
+                    }
+                });
+            });
+        });
+        </script>
+</body>
+</html>
