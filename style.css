@@ -254,6 +254,11 @@ code {
   margin: 1.5rem 0;
 }
 
+.page-desc {
+    text-align: center;
+    color: #C89B3C;
+}
+
 /* Character Cards */
 .character-cards {
     display: flex;
