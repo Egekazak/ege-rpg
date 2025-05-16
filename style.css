@@ -83,7 +83,7 @@ nav ul li a {
     text-decoration: none;
     color: #C8AA6E; /* Gold-ish text */
     font-size: 1em;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     padding: 5px 10px;
     transition: 0.2s;
     font-family: BeaufortforLOL, sans-serif;
@@ -143,9 +143,8 @@ main h1 {
     font-family: BeaufortforLOL, sans-serif;
     font-weight: 700;
     color: #C89B3C;
-    letter-spacing: 3px;
+    letter-spacing: 6px;
     text-align: center;
-    border-bottom: 1px solid #32281E;
     background: linear-gradient(to right, #785A28, #C89B3C);
     background-clip: text;
     -webkit-background-clip: text;
@@ -160,7 +159,7 @@ main h3 {
     line-height: 1.3;
     color: #F0E6D2;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-align: center;
 }
 
@@ -168,7 +167,7 @@ main h4 {
     font-family: BeaufortforLOL;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color: #C8AA6E;
 }
 
@@ -184,6 +183,74 @@ main a {
 
 main ul, ol {
     margin-bottom: 1rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #32281E;
+  position: relative;
+  top: 0.5px; /* nudges line to visually center */
+}
+
+.diamond {
+  width: 7px;
+  height: 7px;
+  transform: rotate(45deg);
+  border: 1px solid #32281E;
+  background: transparent;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: 0 1px;
+}
+
+.decorated-h1 {
+  display: flex;
+  align-items: center;
+}
+
+/* Left and right wrappers */
+.flourish-left,
+.flourish-right {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  height: 1px;
+  padding-left: 20px;
+  padding-right: 24px;
+}
+
+.flourish-line-left {
+  background: linear-gradient(-90deg, #32281E 0, rgba(0, 0, 0, 0));
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 2.22793px;
+  top: 0.5px; /* nudges line to visually center */
+}
+
+.flourish-line-right {
+  background: linear-gradient(90deg, #32281E 0, rgba(0, 0, 0, 0));
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 2.22793px;
+  top: 0.5px; /* nudges line to visually center */
+}
+
+/* Shared diamond style */
+.flourish-box {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #32281E;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+  background-color: transparent;
+  flex-shrink: 0;
 }
 
 .step-image {
@@ -256,7 +323,9 @@ code {
 
 .page-desc {
     text-align: center;
-    color: #C89B3C;
+    color: #A09B8C;
+    margin-bottom: 1rem;
+    margin-top: 5px;
 }
 
 /* Character Cards */
@@ -309,7 +378,7 @@ code {
     font-size: 1.3em;
     color: #C8AA6E;
     font-family: BeaufortforLOL, sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-align: center;
     transition: 0.2s;
 }
@@ -327,7 +396,7 @@ code {
 /* Custom Items Section */
 
 .items {
-    padding-top: 40px;
+    padding-top: 5px;
 }
 
 .item-card {
@@ -375,7 +444,7 @@ code {
     font-size: 1rem;
     font-family: BeaufortforLOL, sans-serif;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color: #C8AA6E;
     transition: 0.2s;
 }
@@ -413,18 +482,18 @@ code {
 
 .filter-buttons {
     text-align: center;
-    margin-top: 20px;
+    margin: 30px;
 }
 
 .filter-btn {
     background-color: #181414;
     color: #C8AA6E;
     font-size: 0.9rem;
-    padding: 5px 5px;
+    padding: 6px;
     margin: 5px 5px;
     border: none;
     cursor: pointer;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     transition: 0.2s ease;
     font-family: BeaufortforLOL, sans-serif;
     font-weight: 400;
