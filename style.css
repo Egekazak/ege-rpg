@@ -358,12 +358,13 @@ code {
 
 .card {
     width: 250px;
-    height: 300px;
+    height: 150px;
     background-color: #2b2b2b;
     overflow: hidden;
     border: 1px solid #32281E;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 3px;
 }
 
 .card:nth-child(1) {
@@ -386,7 +387,7 @@ code {
 }
 
 .card-content {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -395,7 +396,7 @@ code {
 }
 
 .card-content h3 {
-    font-size: 1.3em;
+    font-size: 1.2rem;
     color: #C8AA6E;
     font-family: BeaufortforLOL, sans-serif;
     letter-spacing: 4px;
