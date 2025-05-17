@@ -75,8 +75,11 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 15px;
+    margin: 5px;
     position: relative;
+    border: 1px solid #32281E;
+    border-radius: 3px;
+    padding: 6px;
 }
 
 nav ul li a {
@@ -185,18 +188,27 @@ main ul, ol {
     margin-bottom: 1rem;
 }
 
-.divider {
+.fancy-divider {
   display: flex;
   align-items: center;
-  margin: 8px;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+  padding: 10px;
 }
 
 .line {
-  flex-grow: 1;
+  flex: 1;
   height: 1px;
-  background-color: #32281E;
-  position: relative;
-  top: 0.5px; /* nudges line to visually center */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #32281E, rgba(0, 0, 0, 0));
+}
+
+.line.left {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #32281E);
+}
+
+.line.right {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), #32281E);
 }
 
 .diamond {
@@ -204,10 +216,10 @@ main ul, ol {
   height: 7px;
   transform: rotate(45deg);
   border: 1px solid #32281E;
-  background: transparent;
-  box-sizing: border-box;
+  background: #120F0F; /* matches background, or transparent if preferred */
   flex-shrink: 0;
-  margin: 0 1px;
+  outline: 1px solid #32281E;
+  outline-offset: 2px;
 }
 
 .decorated-h1 {
@@ -238,7 +250,7 @@ main ul, ol {
   background: linear-gradient(90deg, #32281E 0, rgba(0, 0, 0, 0));
   flex-grow: 1;
   height: 1px;
-  margin-left: 2.22793px;
+  margin-left: 1.4px;
   top: 0.5px; /* nudges line to visually center */
 }
 
@@ -254,8 +266,11 @@ main ul, ol {
 }
 
 .divider {
-    background: linear-gradient(90deg, #32281E 0, rgba(0, 0, 0, 0));
-    height: 1px;
+  background: linear-gradient(90deg, #32281E 0, rgba(0, 0, 0, 0));
+  height: 1px;
+  display: flex;
+  align-items: center;
+  margin: 8px;
 }
 
 .step-image {
@@ -329,7 +344,7 @@ code {
 .page-desc {
     text-align: center;
     color: #A09B8C;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     margin-top: 5px;
 }
 
@@ -437,18 +452,66 @@ code {
     text-align: left;
 }
 
+.icon-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0; /* Prevent flex layout from resizing it */
+  margin-right: 10px;
+  overflow: visible;
+}
+
+.circle-border,
 .item-icon {
-    width: 66px;
-    height: 66px;
-    margin-right: 10px;
-    border: 1px solid #32281E;
-    border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.item-icon-wrapper {
+  position: relative;
+    width: 80%;
+    height: 80%;
+    top: 8%;
+    left: 10%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.item-icon-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(0, 0, 0, 0) 30%,    /* center stays clean */
+    rgba(0, 0, 0, 0.5) 60%,  /* darkens earlier */
+    rgba(0, 0, 0, 0.8) 100%  /* very dark at edges */
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.item-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.circle-border {
+  z-index: 2; 
 }
 
 .item-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .item-name {
@@ -502,7 +565,7 @@ code {
 
 .filter-buttons {
     text-align: center;
-    margin: 30px;
+    padding: 10px;
 }
 
 .filter-btn {
