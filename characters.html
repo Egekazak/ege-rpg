@@ -17,7 +17,7 @@
                 <li>
                     <a href="#">WORLD OF WARCRAFT RP</a>
                     <ul class="dropdown">
-                        <li><a href="characters.html">MY CHARACTERS</a></li>
+                        <li><a href="characters.html">CHARACTERS</a></li>
                         <li><a href="custom-items.html">CUSTOM BOOKS</a></li>
                         <li><a href="guides.html">GUIDES</a></li>
                     </ul>
@@ -37,59 +37,92 @@
                     <span class="flourish-line-left"></span>
                     <span class="flourish-box"></span>
                 </div>
-                    <h1>MY CHARACTERS</h1>
+                    <h1>CHARACTERS</h1>
                 <div class="flourish-right">
                     <span class="flourish-box"></span>
                     <span class="flourish-line-right"></span>
                 </div>
             </div>
-            <p class="page-desc">work in progress</p>
-            <div class="character-cards">
-                <div class="card">
-                    <a href="#" class="card-link">
-                        <div class="card-content">
-                            <h3>ARYSSA BEL'ATHIL</h3>
+                <div class="item-card" data-category="demonic">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <div class="icon-wrapper">
+                                <img src="images/circle.svg" alt="" class="circle-border">
+                                <div class="item-icon-wrapper">
+                                    <img src="images/character.png" class="item-icon" alt="icon">
+                                </div>
+                            </div>
+                            <span class="item-text">
+                                <span class="item-name">ARYSSA BEL'ATHIL</span>
+                                <span class="item-subname">THE WEAVER OF SHADOWS</span>
+                            </span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">...</p>
+                            <p class="item-obtained-from"></p>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="card">
-                    <a href="#" class="card-link">
-                        <div class="card-content">
-                            <h3>THERMARA ZAPPERFLUX</h3>
+                <div class="item-card" data-category="demonic">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <div class="icon-wrapper">
+                                <img src="images/circle.svg" alt="" class="circle-border">
+                                <div class="item-icon-wrapper">
+                                    <img src="images/character.png" class="item-icon" alt="icon">
+                                </div>
+                            </div>
+                            <span class="item-text">
+                                <span class="item-name">MALOREN STARSONG</span>
+                                <span class="item-subname">MASTER BLACKSMITH & ARMORER</span>
+                            </span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">...</p>
+                            <p class="item-obtained-from"></p>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="card">
-                    <a href="#" class="card-link">
-                        <div class="card-content">
-                            <h3>MALOREN STARSONG</h3>
+                <div class="item-card" data-category="demonic">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <div class="icon-wrapper">
+                                <img src="images/circle.svg" alt="" class="circle-border">
+                                <div class="item-icon-wrapper">
+                                    <img src="images/character.png" class="item-icon" alt="icon">
+                                </div>
+                            </div>
+                            <span class="item-text">
+                                <span class="item-name">THERMARA ZAPPERFLUX</span>
+                                <span class="item-subname">GEARBREAKER</span>
+                            </span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">...</p>
+                            <p class="item-obtained-from"></p>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
-            <div class="character-cards">
-                <div class="card">
-                    <a href="#" class="card-link">
-                        <div class="card-content">
-                            <h3>MAREK THORNE</h3>
+                <div class="item-card" data-category="demonic">
+                    <div class="item-info">
+                        <button class="item-toggle">
+                            <div class="icon-wrapper">
+                                <img src="images/circle.svg" alt="" class="circle-border">
+                                <div class="item-icon-wrapper">
+                                    <img src="images/character.png" class="item-icon" alt="icon">
+                                </div>
+                            </div>
+                            <span class="item-text">
+                                <span class="item-name">ANDRIJA 'ARVAL' BARTOSH</span>
+                                <span class="item-subname">THE UNDYING BLADE</span>
+                            </span>
+                        </button>
+                        <div class="item-details">
+                            <p class="item-description">...</p>
+                            <p class="item-obtained-from"></p>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="card">
-                    <a href="#" class="card-link">
-                        <div class="card-content">
-                            <h3>CAERYN VILEVINE</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#" class="card-link">
-                        <div class="card-content">
-                            <h3>ANDRIJA 'ARVAL' BARTOSH</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
         </section>
     </main>
 
@@ -98,5 +131,42 @@
         <p>© 2025 Ege Kazak - All Rights Reserved</p>
     </footer>
 
+    <script>
+        // Get all the toggle buttons for item cards
+        const itemToggles = document.querySelectorAll('.item-toggle');
+
+        // Add click event listeners to each button
+        itemToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const itemCard = toggle.closest('.item-card'); // Get the closest item card
+                itemCard.classList.toggle('active'); // Toggle the 'active' class to show/hide the item details
+            });
+        });
+    </script>
+    <script>
+        // Get all the filter buttons
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        // Add click event listeners to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category'); // Get the category to filter by
+        
+                // Get all item cards
+                const itemCards = document.querySelectorAll('.item-card');
+        
+                // Loop through each item card and toggle visibility based on category
+                itemCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+        
+                    if (category === "all" || cardCategory === category) {
+                        card.style.display = "block"; // Show item if category matches
+                    } else {
+                        card.style.display = "none"; // Hide item if category doesn't match
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
