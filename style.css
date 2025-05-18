@@ -156,6 +156,17 @@ main h1 {
     margin-bottom: 5px;
 }
 
+main h2 {
+    font-family: BeaufortforLOL;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #F0E6D2;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
 main h3 {
     font-family: BeaufortforLOL;
     font-weight: 700;
