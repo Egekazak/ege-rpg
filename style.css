@@ -34,6 +34,13 @@
   font-style: heavy;
 }
 
+@font-face {
+  font-family: 'RosieBrown';
+  src: url('fonts/Rosie Brown Serif Demo.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -65,8 +72,8 @@ header {
 }
 
 header h1 {
-    font-family: BeaufortforLOL;
-    font-weight: 700;
+    font-family: RosieBrown;
+    font-weight: bold;
     background: linear-gradient(to right, #785A28, #C89B3C);
     background-clip: text;
     -webkit-background-clip: text;
@@ -77,6 +84,7 @@ header h1 {
 nav ul {
     list-style: none;
     padding-top: 10px;
+    gap: 30px;
 }
 
 nav ul li {
@@ -84,14 +92,13 @@ nav ul li {
     margin: 5px;
     position: relative;
     border: 1px solid #32281E;
-    border-radius: 3px;
     padding: 6px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #C8AA6E; /* Gold-ish text */
-    font-size: 1em;
+    font-size: 0.9em;
     letter-spacing: 4px;
     padding: 5px 10px;
     transition: 0.2s;
@@ -118,7 +125,7 @@ nav ul li ul.dropdown {
     overflow: hidden; /* Prevents overflow while collapsed */
     transition: max-height 0.2s ease-out, opacity 0.2s ease-out, visibility 0s linear 0.2s; /* Smooth transition */
     border: 1px solid #32281E;
-    border-radius: 3px;
+    font-size: 0.8rem;
 }
 
 nav ul li:hover ul.dropdown {
@@ -708,5 +715,3 @@ footer {
     font-family: BeaufortforLOL, sans-serif;
     font-weight: 400;
 }
-
-
