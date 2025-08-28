@@ -66,7 +66,7 @@ header {
     top: 0;
 }
 
-.logo {
+.site-logo {
   max-width: 200px;   /* scale logo nicely */
   padding-top: 20px;
 }
@@ -715,4 +715,5 @@ footer {
     font-family: BeaufortforLOL, sans-serif;
     font-weight: 400;
 }
+
 
