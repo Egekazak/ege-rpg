@@ -51,11 +51,17 @@ body {
 header {
     background: #181414; /* Darker background */
     color: #f0e6d2;
-    padding: 20px;
+    align-items: center; 
+    padding: 10px;
     text-align: center;
     border-bottom: 1px solid #32281E;
     letter-spacing: 6px;
     top: 0;
+}
+
+.site-logo {
+  max-width: 200px;   /* scale logo nicely */
+  padding-top: 20px;
 }
 
 header h1 {
@@ -702,3 +708,4 @@ footer {
     font-family: BeaufortforLOL, sans-serif;
     font-weight: 400;
 }
+
