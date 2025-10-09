@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault of Enduriel</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/panzoom/dist/panzoom.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="The Vault of Enduriel" class="site-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li class="mega">
+                <a href="#">WORLD OF WARCRAFT RP</a>
+                <div class="mega-menu" role="menu" aria-label="WoW RP Mega Menu">
+                    <div class="mega-col">
+                    <h4>Character & Writing</h4>
+                    <a href="scriptorium.html">The Scriptorium</a>
+                    <a href="trp-guides.html">TRP 3 Customization Guide</a>
+                    <a href="contracts.html">Contract & Agreement Templates</a>
+                    </div>
+
+                    <div class="mega-col">
+                    <h4>Worldbuilding</h4>
+                    <a href="economy.html">Economy Guide</a>
+                    <a href="wip.html">Magical Reagents & Material Index</a>
+                    <a href="wip.html">Curses, Afflictions & Diseases</a>
+                    <a href="armorial.html">Aldenwall: Eastern Kingdoms Armorial Ledger</a>
+                    </div>
+
+                    <div class="mega-col">
+                    <h4>Magic</h4>
+                    <a href="wip.html">The Spellbook</a>
+                    </div>
+                </div>
+                </li>
+                <li><a href="music.html">MUSIC</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+  <section>
+    <div class="decorated-h1">
+      <div class="flourish-left"><span class="flourish-line-left"></span><span class="flourish-box"></span></div>
+      <h1>ARMORIAL LEDGER</h1>
+      <div class="flourish-right"><span class="flourish-box"></span><span class="flourish-line-right"></span></div>
+    </div>
+    <p><b>On PC:</b> Zoom in and out with your mouse wheel, use left click to drag the image. <b>On Mobile:</b> ... just use your hands.</p>
+
+    <div class="fancy-divider">
+      <span class="line left"></span><span class="diamond"></span><span class="line right"></span>
+    </div>
+
+    <!-- Image viewer -->
+    <div class="ledger-viewer" id="viewer">
+      <img id="ledger-image" src="images/heraldry-ledger-01.jpg" alt="Armorial Ledger Page 1">
+    </div>
+
+    <div class="ledger-controls">
+        <button id="prev-btn">◀ PREV</button>
+        <button id="next-btn">NEXT ▶</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Ege Kazak - All Rights Reserved</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const images = [
+    "images/eastern_kingdoms_armorial_ledger_page_01.jpg",
+    "images/eastern_kingdoms_armorial_ledger_page_02.jpg",
+    "images/eastern_kingdoms_armorial_ledger_page_03.jpg"
+  ];
+
+  let index = 0;
+  const img = document.getElementById("ledger-image");
+  const viewer = document.getElementById("viewer");
+
+  const panzoom = Panzoom(viewer.querySelector("img"), {
+    maxScale: 5,
+    contain: 'outside'
+  });
+
+  viewer.addEventListener("wheel", panzoom.zoomWithWheel);
+
+  // Load the first image
+  img.src = images[index];
+
+  // When an image loads, fit it nicely to viewer size
+  img.addEventListener("load", () => {
+    panzoom.reset();
+
+    // compute fitting ratio dynamically
+    const container = viewer.getBoundingClientRect();
+    const naturalRatio = img.naturalWidth / img.naturalHeight;
+    const containerRatio = container.width / container.height;
+
+    let scale;
+    if (naturalRatio > containerRatio) {
+      // image is wider than container
+      scale = container.width / img.naturalWidth;
+    } else {
+      // image is taller than container
+      scale = container.height / img.naturalHeight;
+    }
+
+    panzoom.zoom(scale, { animate: false });
+    panzoom.pan(0, 0);
+  });
+
+  function showPage(i) {
+    index = (i + images.length) % images.length;
+    img.src = images[index];
+  }
+
+  document.getElementById("next-btn").addEventListener("click", () => showPage(index + 1));
+  document.getElementById("prev-btn").addEventListener("click", () => showPage(index - 1));
+});
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault of Enduriel</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="The Vault of Enduriel" class="site-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li class="mega">
+                <a href="#">WORLD OF WARCRAFT RP</a>
+                <div class="mega-menu" role="menu" aria-label="WoW RP Mega Menu">
+                    <div class="mega-col">
+                    <h4>Character & Writing</h4>
+                    <a href="scriptorium.html">The Scriptorium</a>
+                    <a href="trp-guides.html">TRP 3 Customization Guide</a>
+                    <a href="contracts.html">Contract & Agreement Templates</a>
+                    </div>
+
+                    <div class="mega-col">
+                    <h4>Worldbuilding</h4>
+                    <a href="economy.html">Economy Guide</a>
+                    <a href="wip.html">Magical Reagents & Material Index</a>
+                    <a href="wip.html">Curses, Afflictions & Diseases</a>
+                    <a href="armorial.html">Aldenwall: Eastern Kingdoms Armorial Ledger</a>
+                    </div>
+
+                    <div class="mega-col">
+                    <h4>Magic</h4>
+                    <a href="wip.html">The Spellbook</a>
+                    </div>
+                </div>
+                </li>
+                <li><a href="music.html">MUSIC</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section>
+            <div class="decorated-h1">
+                <div class="flourish-left">
+                    <span class="flourish-line-left"></span>
+                    <span class="flourish-box"></span>
+                </div>
+                    <h1>TRP 3 CUSTOMIZATION</h1>
+                <div class="flourish-right">
+                    <span class="flourish-box"></span>
+                    <span class="flourish-line-right"></span>
+                </div>
+            </div>
+                    <p>
+                        To apply <strong>custom colors</strong> and <strong>icons</strong> in areas that Total RP 3 doesn't allow us to officially customize through the in-game UI, we'll need to edit the <code>totalRP3.lua</code> file directly.
+                    </p>
+                    <p>
+                        To do this easily, I recommend using a code editor that simplifies reading and editing <code>.lua</code> files.
+                    </p>
+
+                    <h4>Recommended Free Editors</h4>
+                        <ul>
+                            <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                            <li><a href="https://atom-editor.cc/">Atom</a></li>
+                        </ul>
+
+                    <figure class="step-image">
+                        <img src="images/ex_therm.jpg" alt="Example">
+                        <figcaption>Colored title, race, currently and ooc. Icon next to race.</figcaption>
+                    </figure>
+                    <br>
+                    <h4>Locating the <code>totalRP3.lua</code> File:</h4>
+                        <ol>
+                            <li>Navigate to the following folder:<br>
+                                <code>Epsilon > _retail_ > WTF > Account > YOURACCOUNTNAME > SavedVariables</code>
+                            </li>
+                            <li>Inside the <code>SavedVariables</code> folder, find and open the file named:<br>
+                                <strong><code>totalRP3.lua</code></strong>
+                            </li>
+                        </ol>
+
+                    <h4>⚠️ IMPORTANT — Read before editing ⚠️</h4>
+                        <ul>
+                            <li><strong>Always make a backup</strong> of your <code>totalRP3.lua</code> file before making any changes.</li>
+                            <li><strong>Never edit the file while the game is running or your character is logged in.</strong> The game will overwrite any unsaved edits when it closes.</li>
+                        </ul>
+
+                    <h4>Safe Editing Workflow:</h4>
+                        <ol>
+                            <li><strong>Log out</strong> of your character in-game.</li>
+                            <li><strong>Open <code>totalRP3.lua</code></strong> in your code editor.</li>
+                            <li><strong>Make your changes</strong>, then <strong>save</strong> the file.</li>
+                            <li><strong>Log back in</strong> to see the changes reflected in your profile.</li>
+                        </ol>
+
+                    <div class="note">
+                        <p>
+                            <strong>Note:</strong> Total RP 3 does <em>not</em> update this file in real-time. If you edit the <code>.lua</code> file while the game or TRP is still running, you may overwrite your edits or lose progress.
+                        </p>
+                        <p>
+                            If you're using <strong>Visual Studio Code</strong>, it will auto-refresh the file when the game updates it after logout. If you're using another editor, it's best to <strong>close and reopen</strong> the file after each game session to ensure you're editing the latest version.
+                        </p>
+                    </div>
+    
+                    <h4>Understanding TRP Formatting Codes</h4>
+                        <p>TRP uses special formatting codes to embed colors and icons directly into profile text. Here’s a breakdown:</p>
+
+                    <dl class="formatting-codes">
+                        <dt><code><span class="cff">|cff</span><span class="hexcolor">RRGGBB</span></code></dt>
+                            <dd>
+                                Starts a color segment. Replace <code>RRGGBB</code> with a hex color code.<br>
+                                <strong>Example:</strong> <code><span class="cff">|cff</span><span class="hexcolor">ffd0c2</span></code> is a soft pink.
+                            </dd>
+
+                        <dt><code>|r</code></dt>
+                            <dd>
+                                Resets the color back to default. Always use this after a <code>|cff</code> to prevent color bleed.
+                            </dd>
+                        <br>
+                        <dt><code><span class="cff">|T</span><span class="hexcolor">texturePath:size</span><span class="cff">|t</span></code></dt>
+                            <dd>
+                                Embeds an icon. <code>texturePath</code> is the icon’s file path, and <code>size</code> sets its dimensions.<br>
+                                <strong>Example:</strong> <code><span class="cff">|T</span><span class="hexcolor">Interface\\Icons\\pet_type_mechanical:20</span><span class="cff">|t</span></code> shows a 20x20 mechanical pet icon.
+                            </dd>
+                        </dl>
+                    <br>
+                    <h4>EDITING THE CODE</h4>
+                    <p>I will now use <strong>CTRL+F</strong> to search for my characters name within the <code>.lua</code> file.</p>
+                    <figure class="step-image-code-2">
+                        <img src="images/code_therm.png" alt="Example">
+                        <figcaption></figcaption>
+                    </figure>
+                        <p>
+                            We are going to add color to the <code>["RA"]</code> attribute which is the Race. TRP uses standard hex color codes (like in CSS) to color text. <br> I chose the color <code>#FFD0C2</code>
+                        </p>    
+                    <div class="code-block">
+                        <code>["RA"] = "<span class="cff">|cff</span><span class="hexcolor">ffd0c2</span>Mechagnome<span class="r">|r</span>",</code>
+                    </div>
+                    <br>
+                        <p>
+                            I also want to add an icon next to the race. Icons in World of Warcraft are stored in the 
+                            <code>Interface\\Icons</code> directory. 
+                            You can find the icon names using the in-game icon browser when customizing your TRP3 profile—hovering over an icon will display its file name.
+                        </p>
+                    <div class="code-block">
+                        <code>["RA"] = "<span class="T">|T</span>Interface\\Icons\\pet_type_mechanical:20<span class="T">|t</span> <span class="cff">|cff</span><span class="hexcolor">ffd0c2</span>Mechagnome<span class="r">|r</span>",</code>
+                    </div>
+                    <figure class="step-image-code">
+                        <img src="images/code_therm2.png" alt="Example">
+                    <figcaption></figcaption>
+                    </figure>
+                    <div class="note">
+                        <p>
+                            <strong>Note:</strong> You can also apply custom colors to elements like your <strong>glances</strong>, <strong>title</strong>, <strong>currently</strong>, and more. 
+                            However, when it comes to adding icons, I recommend using them only in either your <strong>race</strong> or <strong>class</strong> fields.
+                        </p>
+                        <p>
+                            Avoid cluttering your profile with too many icons or effects—<em>simplicity is key</em>. A clean and focused profile is not only easier to read but also looks much more polished.
+                        </p>
+                        <p>
+                            Keep in mind that other players may not see the changes you've made until they reset your profile on their end. 
+                            If you edit any text within your TRP profile (like your Title, Glances or Currently sections), you'll need to reapply the custom colors or icons inside the <code>.lua</code> file.
+                        </p>
+                        <p>
+                            For this reason, it's best to apply your formatting only after your profile content is finalized. Otherwise, you'll end up having to repeat the process every time you make edits.
+                        </p>
+                    </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Ege Kazak - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
