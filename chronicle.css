@@ -18,6 +18,7 @@
 }
 .chronicle-header h2,
 .chronicle-header .subtitle {
+  margin-top: 0.4em;
   text-align: center;
   color: #b9a787;
 }
