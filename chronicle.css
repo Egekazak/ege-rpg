@@ -1,0 +1,71 @@
+.chronicle-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #0f0d0d;
+  border: 1px solid #2a231c;
+  border-radius: 6px;
+  color: #e9e3d1;
+  line-height: 1.6;
+}
+
+.chronicle-header h1 {
+  text-align: center;
+  font-family: "BeaufortforLOL", serif;
+  font-size: 2rem;
+  letter-spacing: 6px;
+  color: #c7aa6e;
+}
+.chronicle-header h2,
+.chronicle-header .subtitle {
+  text-align: center;
+  color: #b9a787;
+}
+
+.folio-nav {
+  text-align: center;
+  margin: 1rem 0 2rem;
+}
+.folio-nav a {
+  color: #c7aa6e;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+.folio-nav a:hover {
+  text-decoration: underline;
+}
+
+.folio-entry {
+  margin-bottom: 4rem;
+}
+.folio-entry h3 {
+  color: #c7aa6e;
+}
+.folio-meta {
+  font-size: 0.9rem;
+  color: #b9a787;
+  margin-bottom: 1rem;
+}
+.folio-text p {
+  margin-bottom: 1.2rem;
+  text-indent: 1.5em;
+}
+.folio-footer {
+  text-align: right;
+  margin-top: 1rem;
+}
+.folio-footer a {
+  color: #c7aa6e;
+  text-decoration: none;
+}
+.folio-footer a:hover {
+  text-decoration: underline;
+}
+.folio-text p {
+  margin-bottom: 1.1rem;
+  text-indent: 1.5em;
+}
+.folio-text i {
+  color: #d8c08a;      /* warmer tone for speech */
+  font-weight: 500;
+}

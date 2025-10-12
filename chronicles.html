@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vault of Enduriel — The Chronicles</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chronicle.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- Global navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(r => r.text())
+      .then(d => document.getElementById("nav-placeholder").innerHTML = d);
+  </script>
+
+  <!-- Main Chronicle content -->
+  <main>
+            <p class="page-desc">
+                <i>
+                    « Chronicles is a personal project set in our own world during the 14th and 15th centuries — a stage for stories about different characters. Each story is written in the form of a medieval account: a chronicle, a letter, or a witness testimony, told through the eyes of those who lived it. »
+                </i>
+            </p>
+            <div class="fancy-divider">
+                <span class="line left"></span>
+                <span class="diamond"></span>
+                <span class="line right"></span>
+            </div>
+    <section class="chronicle-container">
+      <header class="chronicle-header">
+            <div class="decorated-h1">
+                <div class="flourish-left">
+                    <span class="flourish-line-left"></span>
+                    <span class="flourish-box"></span>
+                </div>
+                    <h1>✠ CHRONICLES ✠</h1>
+                <div class="flourish-right">
+                    <span class="flourish-box"></span>
+                    <span class="flourish-line-right"></span>
+                </div>
+            </div>
+        <h2>The Prague Road</h2>
+        <p class="subtitle">FROM THE WRITINGS OF BROTHER JAN OF VYŠEHRAD</p>
+      </header>
+
+      <nav class="folio-nav">
+        <a href="#folio1">Folio I</a>
+        <a href="#folio2">Folio II</a>
+      </nav>
+
+      <article id="folio1" class="folio-entry">
+        <h3>◈ Folio I — The Woman by the Road</h3>
+        <div class="folio-meta">
+          <p><i>From the writings of Brother Jan of Vyšehrad, winter 1403</i></p>
+        </div>
+        <div class="folio-text">
+            <p>
+                We found her on the corpse-road south of Vysoké Pole, among the fallen from yesterday’s skirmish. The rain was fine as thread and turned the mud to wine around them. The air was thick with the stench of wet iron and trampled earth—blood turning sweet as it cooled.
+            </p>
+            <p>
+                She sat on the broken axle of a cart, cleaning a fallen soldier’s hand, finger by finger, as though he might wake and thank her. The man’s eyes were open to the rain. She closed them when she was done.
+            </p>
+            <p>Marek said, <i>“He’ll not need prayers.”</i></p>
+            <p>She looked up at him and smiled. <i>“Then I’ll keep the words.”</i></p>
+            <p>Her dress had been white once; the cloth clung to her in torn ribbons, mud at the hem and a dark ring about her throat where rope had bitten. Rain slid from her skin as though it could find no purchase. In that gray light she was too young, too composed, and—God forgive me—too beautiful for the field we stood in. Her hair was long and brown, darkened by rain; her eyes were blue, too bright for the day. The smile never left her.</p>
+            <p>She looked between us, then to the dead around her. <i>“Your colours are still whole,”</i> she said. <i>“Most of theirs are gone. Do you miss them—the men or the banners?”</i></p>
+            <p>Marek frowned. <i>“Both rot the same in mud.”</i></p>
+            <p><i>“Then you’re honest,”</i> she said, and rose. <i>“Where are you headed?”</i></p>
+            <p><i>“Prague,”</i> Marek answered. <i>“If the road still leads there.”</i></p>
+            <p>Marek’s hand tightened on his sword belt. <i>“Where does yours lead?”</i></p>
+            <p>She smiled, not as one who had been caught in a question, but as though she’d heard a riddle answered. <i>“I suppose I’ll find out when you do.”</i></p>
+            <p><i>"We’ve no room for strays,"</i> Marek said, and turned down the road. The air felt heavier for it. I cannot explain why, but it seemed a curse to leave her sitting there amid the fallen, a single living figure in the ruin. Perhaps I feared that if we left her, some part of us would stay behind to keep her company.</p>
+            <p>I called to her before I understood why. <i>“Girl—come on then.”</i></p>
+            <p>She rose, gathered her skirt, and followed us barefoot through the mire. When she passed, the rain seemed to hush a moment, as if uncertain of its duty.</p>
+            <p>Marek grumbled, <i>“We’ll regret this.”</i></p>
+            <p><i>“We already regret so many things,”</i> I said. <i>“One more won't matter.”</i></p>
+            <p>She then spoke, softly. <i>“Regret is how God remembers us.”</i></p>
+            <p>Marek gave a low laugh. <i>“Then He must remember me well,”</i> he said.</p>
+            <p>I didn’t answer, but I found myself agreeing.</p>
+            <p>We walked on in silence. The road bent west, the light fading to ash. By the time we found shelter beneath a ruined mill, the rain had turned to mist and clung to everything we owned. She followed without a word, and we let her.</p>
+            <p>I write these words while the fire gutters low. She sleeps across from us, if sleep it is. The rope mark showed clear, no bruise nor welt—only the memory of one. I did not tell him what I saw: that her shadow lingered a breath longer than the firelight allowed.</p>
+            <p>I think it would still have been a curse to leave her.</p>
+        </div>
+        <div class="folio-footer">
+          <a href="#folio2">Continue to Folio II →</a>
+        </div>
+      </article>
+
+      <article id="folio2" class="folio-entry">
+        <h3>◈ Folio II — The Names at the Fire</h3>
+        <div class="folio-meta">
+          <p><i>Work in progress...</i></p>
+        </div>
+        <div class="folio-text">
+          <!-- Paste your Folio II text here -->
+        </div>
+        <div class="folio-footer">
+          <a href="#folio1">← Back to Folio I</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ege Kazak — All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
