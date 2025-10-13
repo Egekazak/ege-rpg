@@ -261,13 +261,53 @@
   </footer>
 
 <script>
-document.querySelectorAll(".folio-entry h3").forEach(header => {
-  header.addEventListener("click", () => {
-    const entry = header.parentElement;
-    entry.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", () => {
+  const folios = document.querySelectorAll(".folio-entry");
+
+  folios.forEach(folio => {
+    const header = folio.querySelector("h3");
+    const text = folio.querySelector(".folio-text");
+
+    header.addEventListener("click", () => {
+      const isActive = folio.classList.contains("active");
+
+      // Close all other folios
+      folios.forEach(f => {
+        f.classList.remove("active");
+        f.querySelector(".folio-text").style.maxHeight = null;
+      });
+
+      if (!isActive) {
+        folio.classList.add("active");
+        text.style.maxHeight = text.scrollHeight + "px";
+      }
+    });
+  });
+
+  // When clicking folio-nav links, auto expand and smooth scroll
+  document.querySelectorAll(".folio-nav a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const id = link.getAttribute("href").substring(1);
+      const target = document.getElementById(id);
+
+      folios.forEach(f => {
+        f.classList.remove("active");
+        f.querySelector(".folio-text").style.maxHeight = null;
+      });
+
+      target.classList.add("active");
+      const text = target.querySelector(".folio-text");
+      text.style.maxHeight = text.scrollHeight + "px";
+
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 150);
+    });
   });
 });
 </script>
+
 
 </body>
 </html>

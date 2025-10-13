@@ -125,3 +125,23 @@
 .folio-entry.active .folio-text {
   display: block;
 }
+
+/* === Collapsible Folio Animation === */
+.folio-text {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-top: 0;
+  transform: translateY(-5px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    padding-top 0.6s ease;
+}
+
+.folio-entry.active .folio-text {
+  opacity: 1;
+  padding-top: 0.5rem;
+  transform: translateY(0);
+}
+
