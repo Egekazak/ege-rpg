@@ -269,7 +269,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const folios = document.querySelectorAll(".folio-entry");
-  const navHeight = 65; // adjust this to match your sticky nav height in px
+  const navHeight = window.innerWidth < 768 ? 105 : 65;
 
   function smoothScrollTo(element) {
     const yOffset = -navHeight;
@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollUp = document.querySelector(".scroll-up");
   const scrollDown = document.querySelector(".scroll-down");
 
-  const scrollDistance = window.innerHeight * 0.05; // 90% of viewport
+  const scrollDistance = window.innerHeight * 0.05; 
 
   scrollUp.addEventListener("click", () => {
     window.scrollBy({ top: -scrollDistance, behavior: "smooth" });
