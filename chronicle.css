@@ -29,7 +29,7 @@
   top: 0px; /* adjust depending on your global nav height */
   background-color: #0f0d0d;
   border: 1px solid #32281E;
-  border-radius: 6px;
+  border-radius: 2px;
   padding: 0.5rem 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -48,7 +48,7 @@
   letter-spacing: 0.05em;
   padding: 0.3rem 0.7rem;
   border: 1px solid transparent;
-  border-radius: 3px;
+  border-radius: 2px;
   transition: all 0.2s ease;
 }
 
@@ -144,4 +144,5 @@
   padding-top: 0.5rem;
   transform: translateY(0);
 }
+
 
