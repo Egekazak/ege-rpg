@@ -97,7 +97,6 @@ nav ul li {
     display: inline-block;
     margin: 5px;
     position: relative;
-    border-bottom: 1px solid #32281E;
     padding: 6px;
 }
 
@@ -1127,3 +1126,4 @@ footer {
     display: block;
   }
 }
+
