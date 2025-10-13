@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
     header.addEventListener("click", () => {
       const isActive = folio.classList.contains("active");
 
-      // Close all other folios
+      // Close all folios
       folios.forEach(f => {
         f.classList.remove("active");
         f.querySelector(".folio-text").style.maxHeight = null;
@@ -280,11 +280,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!isActive) {
         folio.classList.add("active");
         text.style.maxHeight = text.scrollHeight + "px";
+
+        // 🕯️ Smooth scroll to the folio start
+        setTimeout(() => {
+          folio.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
       }
     });
   });
 
-  // When clicking folio-nav links, auto expand and smooth scroll
+  // --- Auto-expand when clicked from folio-nav ---
   document.querySelectorAll(".folio-nav a").forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
@@ -300,6 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const text = target.querySelector(".folio-text");
       text.style.maxHeight = text.scrollHeight + "px";
 
+      // Smooth scroll to the opened folio
       setTimeout(() => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 150);
@@ -307,6 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
 
 
 </body>
