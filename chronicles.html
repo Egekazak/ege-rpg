@@ -260,9 +260,22 @@
     <p>© 2025 Ege Kazak — All Rights Reserved</p>
   </footer>
 
+<!-- Floating Scroll Buttons -->
+<div class="scroll-controls">
+  <button class="scroll-btn scroll-up">▲</button>
+  <button class="scroll-btn scroll-down">▼</button>
+</div>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const folios = document.querySelectorAll(".folio-entry");
+  const navHeight = 65; // adjust this to match your sticky nav height in px
+
+  function smoothScrollTo(element) {
+    const yOffset = -navHeight;
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
 
   folios.forEach(folio => {
     const header = folio.querySelector("h3");
@@ -281,9 +294,9 @@ document.addEventListener("DOMContentLoaded", () => {
         folio.classList.add("active");
         text.style.maxHeight = text.scrollHeight + "px";
 
-        // 🕯️ Smooth scroll to the folio start
+        // Smooth scroll to folio with offset
         setTimeout(() => {
-          folio.scrollIntoView({ behavior: "smooth", block: "start" });
+          smoothScrollTo(folio);
         }, 100);
       }
     });
@@ -295,6 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const id = link.getAttribute("href").substring(1);
       const target = document.getElementById(id);
+      const text = target.querySelector(".folio-text");
 
       folios.forEach(f => {
         f.classList.remove("active");
@@ -302,18 +316,43 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       target.classList.add("active");
-      const text = target.querySelector(".folio-text");
       text.style.maxHeight = text.scrollHeight + "px";
 
-      // Smooth scroll to the opened folio
+      // Smooth scroll to folio with offset
       setTimeout(() => {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        smoothScrollTo(target);
       }, 150);
     });
   });
 });
 </script>
 
+<script>
+// Floating scroll buttons
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollUp = document.querySelector(".scroll-up");
+  const scrollDown = document.querySelector(".scroll-down");
+
+  const scrollDistance = window.innerHeight * 0.05; // 90% of viewport
+
+  scrollUp.addEventListener("click", () => {
+    window.scrollBy({ top: -scrollDistance, behavior: "smooth" });
+  });
+
+  scrollDown.addEventListener("click", () => {
+    window.scrollBy({ top: scrollDistance, behavior: "smooth" });
+  });
+
+  // Optional: hide buttons near top/bottom
+  window.addEventListener("scroll", () => {
+    const scrolled = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+
+    scrollUp.style.opacity = scrolled > 100 ? "0.6" : "0";
+    scrollDown.style.opacity = scrolled < maxScroll - 100 ? "0.6" : "0";
+  });
+});
+</script>
 
 
 </body>

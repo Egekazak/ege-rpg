@@ -145,4 +145,55 @@
   transform: translateY(0);
 }
 
+/* === Floating Scroll Buttons === */
+.scroll-controls {
+  position: fixed;
+  right: 350px;
+  bottom: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 200;
+}
 
+.scroll-btn {
+  background-color: rgba(15, 13, 13, 0.85);
+  border: 1px solid #32281E;
+  color: #c7aa6e;
+  font-size: 1.1rem;
+  font-family: "BeaufortforLOL", serif;
+  padding: 0.5rem 0.7rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.scroll-btn:hover {
+  color: #f0e6d2;
+  border-color: #c7aa6e;
+  transform: translateY(-2px);
+  background-color: rgba(25, 22, 22, 0.95);
+}
+
+/* Fade them slightly when idle */
+.scroll-btn {
+  opacity: 0.6;
+}
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+/* === Mobile adjustments === */
+@media (max-width: 768px) {
+  .scroll-controls {
+    right: 10px;
+    bottom: 80px;
+    gap: 0.4rem;
+  }
+  .scroll-btn {
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+    opacity: 0.7;
+  }
+}
