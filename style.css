@@ -97,6 +97,7 @@ nav ul li {
     display: inline-block;
     margin: 5px;
     position: relative;
+    /* border-bottom: 1px solid #32281E; */
     padding: 6px;
 }
 
@@ -108,7 +109,7 @@ nav ul li a {
     padding: 5px 10px;
     transition: 0.2s;
     font-family: BeaufortforLOL, sans-serif;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 nav ul li a:hover {
@@ -1126,4 +1127,3 @@ footer {
     display: block;
   }
 }
-
