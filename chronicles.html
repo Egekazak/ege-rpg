@@ -12,11 +12,18 @@
 
   <!-- Global navigation -->
   <div id="nav-placeholder"></div>
-  <script>
+    <script>
     fetch("nav.html")
-      .then(r => r.text())
-      .then(d => document.getElementById("nav-placeholder").innerHTML = d);
-  </script>
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById("nav-placeholder").innerHTML = html;
+
+        // now that nav.html is inserted, load nav.js manually
+        const script = document.createElement("script");
+        script.src = "js/nav.js";
+        document.body.appendChild(script);
+    });
+    </script>
 
   <!-- Main Chronicle content -->
   <main>

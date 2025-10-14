@@ -42,6 +42,13 @@
 }
 
 * {
+  -webkit-tap-highlight-color: transparent;
+}
+button, a {
+  touch-action: manipulation;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -67,6 +74,7 @@ header {
 }
 
 .site-logo {
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -1132,5 +1140,125 @@ footer {
     font-size: 0.9rem;
     overflow-x: auto;
     display: block;
+  }
+}
+
+/* MOBILE NAVIGATION FIX */
+@media (max-width: 768px) {
+  header {
+    letter-spacing: 2px;
+    padding: 10px 0;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 0;
+  }
+  nav ul li {
+    display: block;
+    margin: 0;
+  }
+  nav ul li a {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    display: block;
+    padding: 8px 0;
+  }
+  /* Hide mega menu by default */
+  .mega-menu {
+    position: static;
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  /* Tap-to-toggle on mobile */
+  nav ul li.mega.active .mega-menu {
+    display: grid;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+    margin: 0 auto;
+  }
+  main h1, main h2, main h3 {
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+  }
+  .page-desc {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+}
+
+/* Responsive table wrapping */
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  th, td {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+  .contract-block {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .item-card {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .item-details {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .mat-card header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  input[type="search"], select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .custom-player {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .volume-control {
+    min-width: auto;
+    width: 100%;
+  }
+  .download-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    line-height: 1.5;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
+  .decorated-h1 {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .flourish-left, .flourish-right {
+    display: none; /* cleaner on mobile */
   }
 }

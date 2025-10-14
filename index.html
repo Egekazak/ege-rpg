@@ -9,11 +9,19 @@
 </head>
 <body>
     <div id="nav-placeholder"></div>
-    <script>
-    fetch("nav.html")
-        .then(response => response.text())
-        .then(data => document.getElementById("nav-placeholder").innerHTML = data);
-    </script>
+<script>
+fetch("nav.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("nav-placeholder").innerHTML = html;
+
+    // now that nav.html is inserted, load nav.js manually
+    const script = document.createElement("script");
+    script.src = "js/nav.js";
+    document.body.appendChild(script);
+  });
+</script>
+    
     <!-- Main Content Area -->
     <main>
         <section>
