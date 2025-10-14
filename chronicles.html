@@ -61,6 +61,7 @@
         <a href="#folio4">Folio IV</a>
         <a href="#folio5">Folio V</a>
         <a href="#folio6">Folio VI</a>
+        <a href="#glossary">Glossarium Chronicæ</a>
       </nav>
 
       <article id="folio1" class="folio-entry">
@@ -415,12 +416,98 @@
         <div class="folio-footer">
         </div>
       </article>
+     <article id="glossary" class="folio-entry">
+        <h3>◇ Glossarium Chronicæ</h3>
+        <div class="folio-meta">
+          <p><i>Here follow certain names and terms of the time, lest the reader be lost upon the road.</i></p>
+        </div>
+        <div class="folio-text">
+          <div class="glossary-text">
+            <h4>A. Historical Figures</h4>
+            <p>
+              <b>King Wenceslaus IV (1361 – 1419)</b> – King of Bohemia and Roman King, brother to Sigismund. Deposed and imprisoned during the events of 1402–1403.
+            </p>
+            <p>
+              <b>King Sigismund of Luxembourg (1368 – 1437)</b> – Brother to Wenceslaus; led the Crusade of Nicopolis (1396) and later claimed the Bohemian throne.
+            </p>
+            <p>
+              <b>Bayezid I “the Thunderbolt” (1354 – 1403)</b> – Sultan of the Ottoman Turks, victor at Nicopolis.
+            </p>
+            <p>
+              <b>Nicopolis</b> – City on the Danube (modern Vidin region, Bulgaria); site of the failed crusade in 1396.
+            </p>
+            <br>
+            <h4>B. Towns & Regions</h4>
+            <p>
+              <b>Rosice</b> – Small lordly seat west of Brno; crossroads toward Náměšť nad Oslavou.
+            </p>
+            <p>
+              <b>Náměšť nad Oslavou</b> – Castle and settlement overlooking the Oslava River; safe passage toward Třebíč.
+            </p>
+            <p>
+              <b>Třebíč</b> – Monastic town with Benedictine origins; later a Hussite stronghold.
+            </p>
+            <p>
+              <b>Jihlava (Iglau)</b> – Mining town on the Bohemian border; known for its silver and coinage.
+            </p>
+            <br>
+            <h4>C. Arms, Armor & Terms</h4>
+            <p>
+              <b>Rondel dagger</b> – A narrow stabbing dagger with a circular guard, used to pierce mail.
+            </p>
+            <p>
+              <b>Mail</b> – Interlinked iron rings worn over padding; offers flexibility and limited protection.
+            </p>
+            <p>
+              <b>Plate harness</b> – Steel plates strapped over mail; a full suit was rare among common soldiers.
+            </p>
+            <p>
+              <b>Surcoat</b> – A sleeveless cloth garment worn over armor, often bearing a soldier’s colours.
+            </p>
+            <p>
+              <b>Halberd</b> – A polearm with an axe-blade and spear point, used by foot soldiers.
+            </p>
+            <p>
+              <b>Hammer of war</b> – Short-hafted weapon with a spike or hammer head for crushing armour.
+            </p>
+            <br>
+            <h4>D. Everyday & Ecclesiastical Terms</h4>
+            <p>
+              <b>Corpse-road</b> – Rural path once used to carry the dead to consecrated ground.
+            </p>
+            <p>
+              <b>Tallow</b> – Rendered animal fat used for lamps and candles; smell often clung to villages.
+            </p>
+            <p>
+              <b>Stole</b> – Narrow strip of fabric worn by priests during service.
+            </p>
+            <p>
+              <b>Consorter</b> – One who keeps forbidden company, often used in witchcraft accusations.
+            </p>
+            <p>
+              <b>Cloister</b> – Enclosed courtyard of a monastery.
+            </p>
+          </div>
+        </div>
+        <div class="folio-footer">
+        </div>
+      </article>
     </section>
   </main>
 
   <footer>
     <p>© 2025 Ege Kazak — All Rights Reserved</p>
   </footer>
+
+  <!-- Accordion Script -->
+  <script>
+    document.querySelectorAll('.item-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const card = toggle.closest('.item-card');
+        card.classList.toggle('active');
+      });
+    });
+  </script>
 
 <!-- Floating Scroll Buttons -->
 <div class="scroll-controls">

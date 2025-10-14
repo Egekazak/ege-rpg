@@ -83,10 +83,6 @@
   color: #b9a787;
   margin-bottom: 1rem;
 }
-.folio-text p {
-  margin-bottom: 1.2rem;
-  text-indent: 1.5em;
-}
 .folio-footer {
   text-align: right;
   margin-top: 1rem;
@@ -102,6 +98,10 @@
 .folio-text p {
   margin-bottom: 1.1rem;
   text-indent: 1.5em;
+}
+.glossary-text p {
+  text-indent: 0;
+  margin-bottom: 0.5rem;
 }
 .folio-text i {
   color: #d8c08a;      /* warmer tone for speech */
