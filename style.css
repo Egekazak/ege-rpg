@@ -98,6 +98,12 @@ nav {
   z-index: 50; /* keep it above content */
 }
 
+.nav-wip {
+  color: #C89B3C;
+  font-family: 'BeaufortforLOL';
+  font-weight: 600;
+}
+
 .nav-line {
   color: #32281E;
 }
@@ -1283,16 +1289,16 @@ table {
 
 @media (max-width: 600px) {
   .custom-player {
-    flex-direction: column;
-    align-items: stretch;
+    width: 100%;
   }
   .volume-control {
     min-width: auto;
-    width: 100%;
+    width: 50%;
   }
   .download-buttons {
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 65px;
   }
 }
 
@@ -1303,11 +1309,20 @@ table {
   footer {
     font-size: 0.8rem;
   }
-  .decorated-h1 {
-    flex-direction: column;
-    gap: 6px;
+  .nav-line {
+    display: none;
   }
-  .flourish-left, .flourish-right {
-    display: none; /* cleaner on mobile */
+  .item-name {
+    font-size: 1rem;
+  }
+  .album-cover {
+    width: 50%;
+  }
+  .album-cover img {
+    image-rendering: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 }
