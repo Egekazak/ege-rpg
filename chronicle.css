@@ -23,6 +23,12 @@
   color: #b9a787;
 }
 
+.chronicle-header {
+  padding-bottom: 20px;
+  background: none;
+  border-bottom: 1px solid #2a231c;
+}
+
 /* === Sticky Folio Navigation === */
 .folio-nav {
   position: sticky;

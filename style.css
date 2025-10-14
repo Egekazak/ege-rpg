@@ -59,7 +59,7 @@ header {
     background: #181414; /* Darker background */
     color: #f0e6d2;
     align-items: center; 
-    padding: 10px;
+    padding-bottom: 6px;
     text-align: center;
     border-bottom: 1px solid #32281E;
     letter-spacing: 6px;
@@ -67,8 +67,11 @@ header {
 }
 
 .site-logo {
-  max-width: 200px;   /* scale logo nicely */
-  padding-top: 20px;
+  text-align: center;
+}
+
+.site-logo img{
+  max-width: 250px;   /* scale logo nicely */
 }
 
 header h1 {
@@ -85,6 +88,10 @@ header h1 {
 nav {
   position: relative;
   z-index: 50; /* keep it above content */
+}
+
+.nav-line {
+  color: #32281E;
 }
 
 nav ul {
