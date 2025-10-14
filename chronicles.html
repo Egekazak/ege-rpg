@@ -55,13 +55,16 @@
       </header>
 
       <nav class="folio-nav">
-        <a href="#folio1">Folio I</a>
-        <a href="#folio2">Folio II</a>
-        <a href="#folio3">Folio III</a>
-        <a href="#folio4">Folio IV</a>
-        <a href="#folio5">Folio V</a>
-        <a href="#folio6">Folio VI</a>
-        <a href="#glossary">Glossarium Chronicæ</a>
+        <div class="folio-links">
+          <a href="#folio1">Folio I</a>
+          <a href="#folio2">Folio II</a>
+          <a href="#folio3">Folio III</a>
+          <a href="#folio4">Folio IV</a>
+          <a href="#folio5">Folio V</a>
+          <a href="#folio6">Folio VI</a>
+          <a href="#glossary">Glossarium Chronicæ</a>
+        </div>
+        <button class="folio-toggle" aria-label="Toggle folio menu">▼</button>
       </nav>
 
       <article id="folio1" class="folio-entry">
@@ -518,7 +521,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const folios = document.querySelectorAll(".folio-entry");
-  const navHeight = window.innerWidth < 768 ? 105 : 65;
+  const navHeight = window.innerWidth < 768 ? 110 : 65;
 
   function smoothScrollTo(element) {
     const yOffset = -navHeight;
@@ -603,6 +606,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const folioNav = document.querySelector(".folio-nav");
+  const toggleBtn = document.querySelector(".folio-toggle");
+
+  if (folioNav && toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      folioNav.classList.toggle("expanded");
+    });
+  }
+});
+</script>
 
 </body>
 </html>
