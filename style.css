@@ -1108,7 +1108,7 @@ footer {
   padding-left: 1rem;
   font-style: italic;
   color: #C8AA6E;
-  margin: 1.8rem 0;
+  margin: 1rem 0;
   background: rgba(26, 20, 20, 0.35);
   line-height: 1.7;
 }
@@ -1151,6 +1151,34 @@ footer {
 .guide-text i {
   color: #A09B8C;
 }
+
+/* Heraldic headers for noble examples */
+.heraldic-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.heraldic-header img {
+  width: 48px;
+  height: 48px;
+  /* border: 1px solid #32281E; */
+  /* border-radius: 3px; */
+  /* background: #181414; */
+  background: none;
+  padding: 4px;
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.4); */
+}
+
+.heraldic-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: #C8AA6E;
+}
+
 
 /* === TABLE + MOBILE RESPONSIVE === */
 @media (max-width: 900px) {
