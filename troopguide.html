@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vault of Enduriel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+    <script>
+    fetch("nav.html")
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById("nav-placeholder").innerHTML = html;
+
+        // now that nav.html is inserted, load nav.js manually
+        const script = document.createElement("script");
+        script.src = "js/nav.js";
+        document.body.appendChild(script);
+    });
+    </script>
+
+  <main>
+    <section>
+      <div class="decorated-h1">
+        <div class="flourish-left">
+          <span class="flourish-line-left"></span>
+          <span class="flourish-box"></span>
+        </div>
+        <h1>A GUIDE TO REALISTIC TROOPS (14TH–15TH CENTURY)</h1>
+        <div class="flourish-right">
+          <span class="flourish-box"></span>
+          <span class="flourish-line-right"></span>
+        </div>
+      </div>
+
+      <p class="page-desc"><i>« Not every man in armor is a knight. Not every sword is meant for war. »</i></p>
+
+      <div class="fancy-divider">
+        <span class="line left"></span>
+        <span class="diamond"></span>
+        <span class="line right"></span>
+      </div>
+
+      <article class="guide-text">
+
+        <p>
+          This guide helps players design believable armies, garrisons, and retinues grounded in late-medieval reality. Use it to structure troops, equipment, and ranks in a way that makes your world feel alive and coherent.
+        </p>
+
+        <hr>
+
+        <h2>1. Hierarchy at a Glance</h2>
+        <table>
+          <tr><th>Tier</th><th>Type</th><th>Who They Are</th><th>Equipment / Training</th><th>Where You’d Find Them</th></tr>
+          <tr><td>I</td><td>Nobility (Knights & Lords)</td><td>Landed nobles sworn to the realm; command men-at-arms.</td><td>Full plate or brigandine over mail; expert in mounted & foot combat.</td><td>Commanders, vassals, elite guards.</td></tr>
+          <tr><td>II</td><td>Professionals (Men-at-Arms / Sergeants)</td><td>Paid retainers or lesser gentry; backbone of most armies.</td><td>Brigandine or half-plate, arming sword, poleaxe or warhammer, heater shield.</td><td>Household troops, castle garrisons, front-line infantry.</td></tr>
+          <tr><td>III</td><td>Skilled Commoners (Archers / Crossbowmen)</td><td>Yeomen, guildsmen, or hired specialists.</td><td>Gambeson, jack chains, sallet or kettle helm, longbow or crossbow.</td><td>Town militias, retinues, skirmishers.</td></tr>
+          <tr><td>IV</td><td>Militia (Footmen / Guards / Spearmen)</td><td>Local townsfolk or retainers under arms.</td><td>Padded jack or mail shirt, spear, billhook, shield.</td><td>Gate guards, patrols, levy service.</td></tr>
+          <tr><td>V</td><td>Peasantry (Levies / Rabble)</td><td>Untrained conscripts pressed for war.</td><td>Simple gambeson, staff weapons, farm tools, maybe a helmet.</td><td>Large wars, sieges, desperate campaigns.</td></tr>
+        </table>
+
+        <hr>
+
+        <h2>2. Key Definitions</h2>
+
+        <h3>Knights</h3>
+        <ul>
+          <li>Landed nobles or vassals; symbols of chivalry and authority.</li>
+          <li>Fight on horseback but often dismount by this era.</li>
+          <li>Full plate or brigandine over mail, lance and sword, destrier or courser.</li>
+          <li>Addressed as <b>“Ser.”</b> Only a few per noble house (2–5 typical).</li>
+        </ul>
+
+        <h3>Men-at-Arms</h3>
+        <ul>
+          <li>Paid professionals or retainers sworn to a lord.</li>
+          <li>Former squires, lesser knights, or mercenaries.</li>
+          <li>Equipped with halberds, poleaxes, or warhammers; brigandine or half-plate.</li>
+          <li>The backbone of every serious retinue.</li>
+        </ul>
+
+        <h3>Footmen / Guards</h3>
+        <ul>
+          <li>Permanent retainers of a keep or town; maintain order and defense.</li>
+          <li>Padded jack or short mail, kettle helm, spear or bill.</li>
+          <li>Distinct from levies — they are paid and drilled regularly.</li>
+          <li><i>In RP: a manor or town might have 8–20 footmen total.</i></li>
+        </ul>
+
+        <h3>Levies</h3>
+        <ul>
+          <li>Peasants raised temporarily for defense or war.</li>
+          <li>Little or no training; minimal armor, farm tools adapted for battle.</li>
+          <li>Return to their fields once the war ends.</li>
+          <li><i>Never use levies as daily guards — they are seasonal troops.</i></li>
+        </ul>
+
+        <h3>Archers & Crossbowmen</h3>
+        <ul>
+          <li>Skilled commoners trained from youth.</li>
+          <li>Longbowmen — disciplined and deadly at range.</li>
+          <li>Crossbowmen — easier to train, slower to reload.</li>
+          <li>Light armor; travel with pavises or stakes for cover.</li>
+        </ul>
+
+        <div class="note">
+          <p><b>Clarification — Longbowmen:</b> Though common-born, longbowmen were elite specialists. In training and battlefield value, they stood <i>between skilled commoners and professionals</i>. In social rank, however, they remained yeomen, not knights. Place them at Tier III, but treat elite longbow companies as near-professional formations.</p>
+        </div>
+
+        <hr>
+
+        <h2>3. Numbers & Ratios (For RP Balance)</h2>
+        <table>
+          <tr><th>Army Type</th><th>Knights</th><th>Men-at-Arms</th><th>Archers / Crossbows</th><th>Footmen</th><th>Levies</th></tr>
+          <tr><td>Small Retinue (20–50 men)</td><td>1–2</td><td>6–12</td><td>10–15</td><td>10–20</td><td>–</td></tr>
+          <tr><td>Baronial Force (100–200 men)</td><td>3–5</td><td>30–50</td><td>40–60</td><td>50–80</td><td>20–50</td></tr>
+          <tr><td>Ducal Host (300–600 men)</td><td>6–10</td><td>100–150</td><td>100–200</td><td>150–250</td><td>100+</td></tr>
+        </table>
+        <p><i>In RP, a noble’s personal retinue rarely exceeds 30–60 professional men.</i></p>
+
+        <hr>
+
+        <h2>4. Common Mistakes in RP</h2>
+        <ul>
+          <li>❌ <b>Too many knights.</b> Knighthood was rare and symbolic.</li>
+          <li>❌ <b>Over-armored peasants.</b> Mail and plate were costly; commoners wore padded jacks.</li>
+          <li>❌ <b>Mixing guards and soldiers.</b> Guards keep order; soldiers fight wars.</li>
+          <li>❌ <b>Standing armies everywhere.</b> Only major realms or orders maintained permanent forces.</li>
+        </ul>
+
+        <hr>
+
+        <h2>5. Weapons & Armor by Tier</h2>
+        <table>
+          <tr><th>Tier</th><th>Typical Weapons</th><th>Typical Armor</th></tr>
+          <tr><td>I – Nobility</td><td>Lance, longsword, dagger</td><td>Full plate, surcoat, crested helm</td></tr>
+          <tr><td>II – Professionals</td><td>Poleaxe, arming sword, warhammer</td><td>Half-plate or brigandine, bascinet, mail sleeves</td></tr>
+          <tr><td>III – Skilled Commoners</td><td>Longbow, crossbow, short sword</td><td>Gambeson, jack chains, kettle helm</td></tr>
+          <tr><td>IV – Militia</td><td>Spear, billhook, club</td><td>Padded jack, leather cap, small shield</td></tr>
+          <tr><td>V – Peasantry</td><td>Pitchfork, flail, staff</td><td>Cloth or thick tunic, occasional helmet</td></tr>
+        </table>
+
+        <hr>
+
+        <h2>6. Pay & Maintenance</h2>
+        <table>
+          <tr><th>Rank</th><th>Typical Pay</th><th>Comparison to Economy Guide</th></tr>
+          <tr><td>Knight</td><td>1–2 gold / month</td><td>Equivalent to a major noble’s stipend</td></tr>
+          <tr><td>Man-at-Arms</td><td>1–2 silver / day</td><td>Standard mercenary rate</td></tr>
+          <tr><td>Footman</td><td>5–8 silver / week</td><td>Steady retainer wage</td></tr>
+          <tr><td>Archer / Crossbowman</td><td>4–6 silver / week</td><td>Similar to tradesmen or hunters</td></tr>
+          <tr><td>Levy</td><td>Food & protection only</td><td>Unpaid, bound by duty</td></tr>
+        </table>
+        <p><i>For detailed wage conversions, see the <a href="economy.html">Economy Guide</a>.</i></p>
+
+        <hr>
+
+        <blockquote>“A lord’s strength lies not in numbers, but in the quality of the few who stand when others flee.”</blockquote>
+
+      </article>
+    </section>
+
+    <div class="fancy-divider">
+      <span class="line left"></span>
+      <span class="diamond"></span>
+      <span class="line right"></span>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Ege Kazak - All Rights Reserved</p>
+  </footer>
+</body>
+</html>
